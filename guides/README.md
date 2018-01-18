@@ -233,4 +233,16 @@ insert into census_partitioned_example partition (year=2014) values ('Caio PARQU
 select * from census_partitioned_example
 where year = 2014
 ```
+### LOAD DATA Statement
+```
+LOAD DATA INPATH 'hdfs_file_or_directory_path' [OVERWRITE] INTO TABLE tablename
+  [PARTITION (partcol1=val1, partcol2=val2 ...)]
+```
+
+Source:
+https://www.cloudera.com/documentation/enterprise/5-4-x/topics/impala_load_data.html
+
+
+
+
 
