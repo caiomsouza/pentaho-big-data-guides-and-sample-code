@@ -24,3 +24,7 @@ num_calls    String);
 drop table test_table;
 ```
 
+### Select 
+```
+select * from test_table;
+```
