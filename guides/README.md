@@ -102,13 +102,6 @@ invalidate metadata test_table;
 refresh test_table;
 ```
 
-
-### PARTITION TABLES
-sss
-
-
-
-
 ### Leave Hadoop Cluster from Safe Mode
 ```
 hdfs dfsadmin -safemode leave
@@ -139,4 +132,14 @@ sudo service --status-all
 ```
 
 
+
+## PARTITION TABLES
+Before you continue please read the documentations below:
+
+* Tuning Impala for Performance
+https://www.cloudera.com/documentation/enterprise/5-8-x/topics/impala_performance.html
+* Impala Frequently Asked Questions
+https://www.cloudera.com/documentation/enterprise/5-6-x/topics/impala_faq.html
+* Partitioning for Impala Tables
+https://www.cloudera.com/documentation/enterprise/5-8-x/topics/impala_partitioning.html#partitioning
 
