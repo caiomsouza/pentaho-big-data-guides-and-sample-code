@@ -162,20 +162,31 @@ Before you continue please read the documentations below:
 * [Impala Frequently Asked Questions](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/impala_faq.html)
 
 
-### Partitioning an internal Impala Table
+### Partitioning an internal Impala Table (TEXT FORMAT)
+
 First create a partitioned table (in this case we are partitioning by year)
 
 ```
 create table census_partitioned_example (name string, census_year int) partitioned by (year int);
 ```
 
-### Create the partitions
+### Create the partitions (TEXT FORMAT)
 ```
 alter table census_partitioned_example add partition (year=2010);
 alter table census_partitioned_example add partition (year=2011);
 alter table census_partitioned_example add partition (year=2012);
 alter table census_partitioned_example add partition (year=2013);
 ```
+
+### Check if the partitiones were created 
+```
+show table stats census_partitioned_example
+```
+
+Output:
+![Image show table stats census_partitioned_example](https://github.com/caiomsouza/pentaho-big-data-guides-and-sample-code/blob/master/guides/images/show_table_stats_from_a_partitioned_table.PNG)
+
+
 
 
 
