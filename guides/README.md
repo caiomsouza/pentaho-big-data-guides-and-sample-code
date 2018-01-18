@@ -49,10 +49,19 @@ drop table test_table;
 ### Select 
 ```
 select * from test_table;
+```
+
+```
 select count(*) from test_table;
+```
+```
 select distinct country from test_table;
+```
+```
 select * from test_table
 where country = 'SPAIN';
+```
+```
 select * from test_table
 where country = 'SPAIN'
 order by num_calls;
