@@ -32,6 +32,11 @@ compute stats test_table;
 show table stats test_table;
 ```
 
+### SHOW COLUMN STATS
+```
+show column stats test_table;
+```
+
 ### CREATE TABLE
 ```
 CREATE TABLE test_table ( 
@@ -96,5 +101,29 @@ invalidate metadata test_table;
 ```
 refresh test_table;
 ```
+
+
+### PARTITION TABLES
+
+
+
+### Leave Safe Mode
+```
+hdfs dfsadmin -safemode leave
+```
+
+Error log:
+```
+2018/01/16 18:41:22 - Hadoop Copy Files - Resources are low on NN. Please add or free up more resources then turn off safe mode manually. NOTE:  If you turn off safe mode before adding resources, the NN will immediately return to safe mode. Use "hdfs dfsadmin -safemode leave" to turn safe mode off.
+```
+
+### Remove HDFS Folders:
+```
+hadoop fs -rm -r -f hdfs://pentahovm:8020/airline_demo
+hadoop fs -rm -r -f hdfs://pentahovm:8020/poc-uk-price-paid-data
+hadoop fs -rm -r -f hdfs://pentahovm:8020/poc-cs
+```
+
+
 
 
