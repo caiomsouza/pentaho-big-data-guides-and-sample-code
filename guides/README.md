@@ -250,9 +250,17 @@ Source:<BR>
 https://www.cloudera.com/documentation/enterprise/5-4-x/topics/impala_load_data.html<BR>
 
 ### Sample Code - Impala Internal Table with Partitions
+
+Job:
+*	Create a partition table on Impala;
+*	Create the partitions;
+*	Insert test data inside different partitions;
+
+
+![Main Job](https://github.com/caiomsouza/pentaho-big-data-guides-and-sample-code/blob/master/sample-code/impala_internal_table_with_partitions/images/Main_Job_Impala_Internal_Table_With_Partitions.PNG)
+
+More details:
 https://github.com/caiomsouza/pentaho-big-data-guides-and-sample-code/blob/master/sample-code/impala_internal_table_with_partitions/README.md
-
-
 
 
 
