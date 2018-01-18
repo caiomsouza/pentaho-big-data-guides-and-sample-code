@@ -22,7 +22,15 @@ show tables;
 describe test_table;
 ```
 
+### COMPUTE TABLE STATS
+```
+compute stats test_table;
+```
 
+### SHOW TABLE STATS
+```
+show table stats test_table;
+```
 
 ### CREATE TABLE
 ```
@@ -46,7 +54,7 @@ num_calls    String);
 drop table test_table;
 ```
 
-### Select 
+### Example of Selects 
 ```
 select * from test_table;
 ```
@@ -65,6 +73,11 @@ where country = 'SPAIN';
 select * from test_table
 where country = 'SPAIN'
 order by num_calls;
+```
+
+### EXPLAIN SELECT
+```
+explain select * from test_table;
 ```
 
 ### Refresh and Invalidate
