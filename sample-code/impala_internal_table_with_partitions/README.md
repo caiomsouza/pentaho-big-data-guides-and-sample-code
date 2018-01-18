@@ -1,5 +1,8 @@
 # Sample Code - Impala Internal Table with Partitions
 
+Download Job:<BR>
+https://github.com/caiomsouza/pentaho-big-data-guides-and-sample-code/tree/master/sample-code/impala_internal_table_with_partitions/kettle<BR>
+
 Job:
 *	Create a partition table on Impala;
 *	Create the partitions;
