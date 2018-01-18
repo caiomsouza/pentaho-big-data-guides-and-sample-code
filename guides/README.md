@@ -239,8 +239,12 @@ LOAD DATA INPATH 'hdfs_file_or_directory_path' [OVERWRITE] INTO TABLE tablename
   [PARTITION (partcol1=val1, partcol2=val2 ...)]
 ```
 
-Source:
-https://www.cloudera.com/documentation/enterprise/5-4-x/topics/impala_load_data.html
+Source:<BR>
+https://www.cloudera.com/documentation/enterprise/5-4-x/topics/impala_load_data.html<BR>
+
+### PDI / KETTLE JOB EXAMPLE OF IMPALA INTERNAL PARTITION
+
+job_impala_internal_table_partition_example.kjb 
 
 
 
