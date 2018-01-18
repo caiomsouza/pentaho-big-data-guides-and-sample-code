@@ -186,8 +186,24 @@ show table stats census_partitioned_example
 Output:
 ![Image show table stats census_partitioned_example](https://github.com/caiomsouza/pentaho-big-data-guides-and-sample-code/blob/master/guides/images/show_table_stats_from_a_partitioned_table.PNG)
 
+### Insert data into your partitioned table (TEXT FORMAT)
+```
+insert into census_partitioned_example partition (year=2013) values ('Smith',2010),('Jones',2010);
+insert into census_partitioned_example partition (year=2010) values ('Smith',2010),('Jones',2010);
+insert into census_partitioned_example partition (year=2011) values ('Smith',2020),('Jones',2020),('Doe',2020);
+insert into census_partitioned_example partition (year=2012) values ('Smith',2020),('Doe',2020);
+```
 
+### Query your table
+```
+select * from census_partitioned_example
+```
 
+### Querying a partition
+```
+select * from census_partitioned_example
+where year = 2013 
+```
 
 
 
