@@ -138,7 +138,7 @@ Before you continue please read the documentations below:
 
 * [Tuning Impala for Performance](https://www.cloudera.com/documentation/enterprise/5-8-x/topics/impala_performance.html)
 * [Impala Frequently Asked Questions](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/impala_faq.html)
-* [ Partitioning for Impala Tables ] ( https://www.cloudera.com/documentation/enterprise/5-8-x/topics/impala_partitioning.html#partitioning )
+
 
 ### Impala
 ```
