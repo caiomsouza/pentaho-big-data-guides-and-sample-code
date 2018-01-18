@@ -1,6 +1,8 @@
 # Guides
 
-Pentaho Big Data Guides
+Pentaho Big Data Guides <BR>
+
+All commands were tested with Impala<BR>
 
 ### SHOW DATABASES
 ```
@@ -54,6 +56,26 @@ weekday    String,
 num_calls    String);
 ```
 
+### CREATE A NEW TABLE BASED ON ANOTHER TABLE
+```
+create table your_new_table like your_old_table;
+```
+
+### INSERT DATA TO YOUR NEW TABLE FROM YOUR OLD TABLE
+```
+insert overwrite table your_new_table select * from your_old_table;
+```
+
+### CREATE A NEW TABLE (PARQUET FORMAT) BASED ON ANOTHER TABLE
+```
+create table your_new_table like your_old_table stored as parquetfile;
+```
+
+### INSERT DATA TO YOUR NEW TABLE (PARQUET FORMAT) FROM YOUR OLD TABLE
+```
+insert overwrite table your_new_table select * from your_old_table;
+```
+
 ### DROP TABLE
 ```
 drop table test_table;
@@ -102,13 +124,6 @@ invalidate metadata test_table;
 refresh test_table;
 ```
 
-
-### PARTITION TABLES
-sss
-
-
-
-
 ### Leave Hadoop Cluster from Safe Mode
 ```
 hdfs dfsadmin -safemode leave
@@ -137,6 +152,31 @@ hadoop fs -rm -r -f hdfs://pentahovm:8020/poc-cs
 ```
 sudo service --status-all
 ```
+
+
+
+## PARTITIONING TABLES
+Before you continue please read the documentations below:
+
+* [Tuning Impala for Performance](https://www.cloudera.com/documentation/enterprise/5-8-x/topics/impala_performance.html)
+* [Impala Frequently Asked Questions](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/impala_faq.html)
+
+
+### Partitioning an internal Impala Table
+First create a partitioned table (in this case we are partitioning by year)
+
+```
+create table census_partitioned_example (name string, census_year int) partitioned by (year int);
+```
+
+### Create the partitions
+```
+alter table census_partitioned_example add partition (year=2010);
+alter table census_partitioned_example add partition (year=2011);
+alter table census_partitioned_example add partition (year=2012);
+alter table census_partitioned_example add partition (year=2013);
+```
+
 
 
 
