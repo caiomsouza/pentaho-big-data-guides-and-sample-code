@@ -162,9 +162,21 @@ Before you continue please read the documentations below:
 * [Impala Frequently Asked Questions](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/impala_faq.html)
 
 
-### Impala
+### Partitioning an internal Impala Table
+First create a partitioned table (in this case we are partitioning by year)
+
 ```
-sudo service --status-all
+create table census_partitioned_example (name string, census_year int) partitioned by (year int);
 ```
+
+### Create the partitions
+```
+alter table census_partitioned_example add partition (year=2010);
+alter table census_partitioned_example add partition (year=2011);
+alter table census_partitioned_example add partition (year=2012);
+alter table census_partitioned_example add partition (year=2013);
+```
+
+
 
 
