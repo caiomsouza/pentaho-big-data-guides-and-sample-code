@@ -1,6 +1,8 @@
 # Guides
 
-Pentaho Big Data Guides
+Pentaho Big Data Guides <BR>
+
+All commands were tested with Impala<BR>
 
 ### SHOW DATABASES
 ```
@@ -52,6 +54,26 @@ country    String,
 time_zone    String, 
 weekday    String, 
 num_calls    String);
+```
+
+### CREATE A NEW TABLE BASED ON ANOTHER TABLE
+```
+create table your_new_table like your_old_table;
+```
+
+### INSERT DATA TO YOUR NEW TABLE FROM YOUR OLD TABLE
+```
+insert overwrite table your_new_table select * from your_old_table;
+```
+
+### CREATE A NEW TABLE (PARQUET FORMAT) BASED ON ANOTHER TABLE
+```
+create table your_new_table like your_old_table stored as parquetfile;
+```
+
+### INSERT DATA TO YOUR NEW TABLE (PARQUET FORMAT) FROM YOUR OLD TABLE
+```
+insert overwrite table your_new_table select * from your_old_table;
 ```
 
 ### DROP TABLE
