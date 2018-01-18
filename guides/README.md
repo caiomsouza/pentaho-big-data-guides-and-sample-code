@@ -233,6 +233,13 @@ insert into census_partitioned_example partition (year=2014) values ('Caio PARQU
 select * from census_partitioned_example
 where year = 2014
 ```
+
+### Partitions inside HDFS
+
+![Partitions inside HDFS](https://github.com/caiomsouza/pentaho-big-data-guides-and-sample-code/blob/master/guides/images/physical_files_for_partitions_impala_internal_table.PNG)
+
+
+
 ### LOAD DATA Statement
 ```
 LOAD DATA INPATH 'hdfs_file_or_directory_path' [OVERWRITE] INTO TABLE tablename
