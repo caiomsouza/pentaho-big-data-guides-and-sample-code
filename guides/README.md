@@ -249,9 +249,8 @@ LOAD DATA INPATH 'hdfs_file_or_directory_path' [OVERWRITE] INTO TABLE tablename
 Source:<BR>
 https://www.cloudera.com/documentation/enterprise/5-4-x/topics/impala_load_data.html<BR>
 
-### PDI / KETTLE JOB EXAMPLE OF IMPALA INTERNAL PARTITION
-
-job_impala_internal_table_partition_example.kjb 
+### Sample Code - Impala Internal Table with Partitions
+https://github.com/caiomsouza/pentaho-big-data-guides-and-sample-code/blob/master/sample-code/impala_internal_table_with_partitions/README.md
 
 
 
