@@ -205,5 +205,32 @@ select * from census_partitioned_example
 where year = 2013 
 ```
 
+### Creating a new partition using PARQUET FORMAT
+```
+alter table census_partitioned_example add partition (year=2014);
+alter table census_partitioned_example partition (year=2014) set fileformat parquet;
+```
 
+### Creating a new partition using AVRO FORMAT
+```
+alter table census_partitioned_example add partition (year=2015);
+alter table census_partitioned_example partition (year=2015) set fileformat avro;
+```
+
+### Check if the partitiones were created (TEXT, PARQUET and AVRO FORMAT)
+```
+show table stats census_partitioned_example
+```
+
+### Inserting data to the table
+```
+insert into census_partitioned_example partition (year=2014) values ('Caio PARQUET',2014),('Jones',2010);
+insert into census_partitioned_example partition (year=2014) values ('Caio PARQUET 2',2014),('Jones',2010);
+```
+
+### Querying the year=2014 partition
+```
+select * from census_partitioned_example
+where year = 2014
+```
 
