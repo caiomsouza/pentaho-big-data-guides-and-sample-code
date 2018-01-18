@@ -259,7 +259,7 @@ Job:
 
 ![Main Job](https://github.com/caiomsouza/pentaho-big-data-guides-and-sample-code/blob/master/sample-code/impala_internal_table_with_partitions/images/Main_Job_Impala_Internal_Table_With_Partitions.PNG)
 
-More details:
+More details: <BR>
 https://github.com/caiomsouza/pentaho-big-data-guides-and-sample-code/blob/master/sample-code/impala_internal_table_with_partitions/README.md
 
 
