@@ -104,10 +104,12 @@ refresh test_table;
 
 
 ### PARTITION TABLES
+sss
 
 
 
-### Leave Safe Mode
+
+### Leave Hadoop Cluster from Safe Mode
 ```
 hdfs dfsadmin -safemode leave
 ```
@@ -117,6 +119,13 @@ Error log:
 2018/01/16 18:41:22 - Hadoop Copy Files - Resources are low on NN. Please add or free up more resources then turn off safe mode manually. NOTE:  If you turn off safe mode before adding resources, the NN will immediately return to safe mode. Use "hdfs dfsadmin -safemode leave" to turn safe mode off.
 ```
 
+* Clean Hadoop Trash to free up disk space
+
+### Check disk space
+```
+df -h
+```
+
 ### Remove HDFS Folders:
 ```
 hadoop fs -rm -r -f hdfs://pentahovm:8020/airline_demo
@@ -124,6 +133,10 @@ hadoop fs -rm -r -f hdfs://pentahovm:8020/poc-uk-price-paid-data
 hadoop fs -rm -r -f hdfs://pentahovm:8020/poc-cs
 ```
 
+### Check running services (Pentaho VM)
+```
+sudo service --status-all
+```
 
 
 
