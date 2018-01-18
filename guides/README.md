@@ -2,7 +2,7 @@
 
 Pentaho Big Data Guides
 
-# CREATE TABLE
+### CREATE TABLE
 ```
 CREATE TABLE test_table ( 
 key    String, 
@@ -19,7 +19,7 @@ weekday    String,
 num_calls    String);
 ```
 
-# DROP TABLE
+### DROP TABLE
 ```
 drop table test_table;
 ```
