@@ -2,6 +2,13 @@
 
 Pentaho Big Data Guides <BR>
 
+### HDFS Commands
+```
+hdfs dfs -ls hdfs://demouser@pentahobdvm.localdomain:8020/
+```
+
+
+
 All commands were tested with Impala<BR>
 
 ### SHOW DATABASES
