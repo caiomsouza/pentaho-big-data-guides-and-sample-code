@@ -12,7 +12,18 @@ hdfs dfs -ls hdfs://demouser@pentahobdvm.localdomain:8020/
 hdfs dfs -mkdir hdfs://demouser@pentahobdvm.localdomain:8020/demo-twitter
 ```
 
-More HDFS commands:
+### HDFS Commands - Remove a folder
+```
+hdfs dfs -rm -r hdfs://demouser@pentahobdvm.localdomain:8020/demo-twitter
+```
+
+### HDFS Commands - Move a folder
+```
+hdfs dfs -mv -r hdfs://demouser@pentahobdvm.localdomain:8020/demo-twitter hdfs://demouser@pentahobdvm.localdomain:8020/demo-twitter2
+```
+
+
+More HDFS commands:<BR>
 https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/FileSystemShell.html
 
 All commands were tested with Impala<BR>
