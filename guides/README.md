@@ -24,7 +24,7 @@ hdfs dfs -mv -r hdfs://demouser@pentahobdvm.localdomain:8020/demo-twitter hdfs:/
 
 
 More HDFS commands:<BR>
-https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/FileSystemShell.html
+https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/FileSystemShell.html<BR>
 
 All commands were tested with Impala<BR>
 
