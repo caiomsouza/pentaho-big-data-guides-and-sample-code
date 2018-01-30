@@ -7,6 +7,21 @@ Pentaho Big Data Guides <BR>
 hdfs dfs -ls hdfs://demouser@pentahobdvm.localdomain:8020/
 ```
 
+### HDFS Commands - Show folder size
+```
+hdfs dfs -du hdfs://demouser@pentahobdvm.localdomain:8020/demo-twitter
+```
+
+### HDFS Commands - Displays the Access Control Lists (ACLs) of files and directories.
+```
+hdfs dfs -getfacl hdfs://demouser@pentahobdvm.localdomain:8020/demo-twitter
+```
+
+### HDFS Commands - Count the number of directories, files and bytes under the paths that match the specified file pattern.
+```
+hdfs dfs -count hdfs://demouser@pentahobdvm.localdomain:8020/demo-twitter
+```
+
 ### HDFS Commands - Create a folder
 ```
 hdfs dfs -mkdir hdfs://demouser@pentahobdvm.localdomain:8020/demo-twitter
@@ -20,6 +35,11 @@ hdfs dfs -rm -r hdfs://demouser@pentahobdvm.localdomain:8020/demo-twitter
 ### HDFS Commands - Move a folder
 ```
 hdfs dfs -mv -r hdfs://demouser@pentahobdvm.localdomain:8020/demo-twitter hdfs://demouser@pentahobdvm.localdomain:8020/demo-twitter2
+```
+
+### HDFS Commands - Empty the Trash. 
+```
+hdfs dfs -expunge
 ```
 
 
