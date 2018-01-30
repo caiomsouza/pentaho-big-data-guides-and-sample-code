@@ -2,12 +2,18 @@
 
 Pentaho Big Data Guides <BR>
 
-### HDFS Commands
+### HDFS Commands - List files and folders
 ```
 hdfs dfs -ls hdfs://demouser@pentahobdvm.localdomain:8020/
 ```
 
+### HDFS Commands - Create a folder
+```
+hdfs dfs -mkdir hdfs://demouser@pentahobdvm.localdomain:8020/demo-twitter
+```
 
+More HDFS commands:
+https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/FileSystemShell.html
 
 All commands were tested with Impala<BR>
 
